@@ -21,7 +21,7 @@ export interface ICustomViewStyle extends ViewStyle {
 
 export interface ISkeletonContentProps {
   isLoading: boolean;
-  layout?: ICustomViewStyle[];
+  layout?: ISkeletonContentProps[];
   duration?: number;
   containerStyle?: StyleProp<ViewStyle>;
   animationType?: _animationType;
