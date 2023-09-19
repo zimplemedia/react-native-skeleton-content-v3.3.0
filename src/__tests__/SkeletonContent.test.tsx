@@ -18,6 +18,8 @@ const staticStyles = {
   backgroundColor: DEFAULT_BONE_COLOR,
 };
 
+const AnimatedView = Animated.View as React.ComponentType<any>;
+
 describe('SkeletonComponent test suite', () => {
   it('should render empty alone', () => {
     const tree = create(<SkeletonContent isLoading={false} />).toJSON();
@@ -45,7 +47,7 @@ describe('SkeletonComponent test suite', () => {
     };
     const instance = create(<SkeletonContent {...props} />);
     const component = instance.root;
-    const bones = component.findAllByType(Animated.View);
+    const bones = component.findAllByType(AnimatedView);
 
     // two bones and parent component
     expect(bones.length).toEqual(layout.length + 1);
