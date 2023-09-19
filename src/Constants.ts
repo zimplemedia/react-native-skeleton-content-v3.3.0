@@ -15,7 +15,7 @@ type _animationDirection =
 
 export interface ICustomViewStyle extends ViewStyle {
   children?: ICustomViewStyle[];
-  backgroundColor?: string?
+  backgroundColor?: string
   key?: number | string;
 }
 
